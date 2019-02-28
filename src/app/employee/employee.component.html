@@ -1,0 +1,25 @@
+<button class="btn btn-info" [routerLink]="['/employee/add']" >Add</button>
+<button class="btn btn-info" [routerLink]="['/stage']" >Stage</button>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">désignation</th>
+      <th scope="col">expertise</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let employee of employees">
+      <th scope="row">{{employee.id}}</th>
+      <td>{{employee.name}}</td>
+      <td>{{employee.designation}}</td>
+      <td>{{employee.expertise}}</td>
+      <td><button (click)="update(employee.id)" class="btn btn-link">Update</button>|<button (click)="delete(employee.id)"
+          class="btn btn-link">Delete</button></td>
+    </tr>
+  </tbody>
+</table>

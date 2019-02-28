@@ -1,0 +1,6 @@
+<form [formGroup]="stageForm" (ngSubmit)="onSubmit()" class="col-md-6">
+  <input type="text" formControlName="nom_etuduant" class="form-control my-3">
+  <input type="number" formControlName="age" class="form-control my-3">
+  <input type="number" formControlName="faculte" class="form-control my-3">
+  <input type="submit" class="btn btn-primary">
+</form>
